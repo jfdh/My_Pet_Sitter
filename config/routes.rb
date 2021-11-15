@@ -9,6 +9,6 @@ resources :bookings, only: :destroy do
   resources :reviews, only: [ :new, :create]
   end
 
-GET 'my_bookings' => 'pages#my_bookings'
+get 'my_bookings' ,to: 'pages#my_bookings'
 
 end
