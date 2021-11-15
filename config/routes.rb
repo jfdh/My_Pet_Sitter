@@ -1,4 +1,3 @@
-
 Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -10,10 +9,5 @@ Rails.application.routes.draw do
   resources :reviews, only: [ :new, :create]
   end
 
-<<<<<<< HEAD
-get 'my_bookings' ,to: 'pages#my_bookings'
-
-=======
   get 'my_bookings', to:'pages#my_bookings'
->>>>>>> a738312fb40d603c8ff1f5f44b342f7951cd7910
 end
