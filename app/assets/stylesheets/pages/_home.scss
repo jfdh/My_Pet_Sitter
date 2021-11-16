@@ -58,6 +58,14 @@ li{
   z-index: 2;
 }
 
+
+.navigation a li{
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  color: white;
+  font-size: 16 px;
+
 .banner{
   overflow: hidden;
   display: block;
@@ -71,6 +79,7 @@ li{
   background-size:cover;
   background-position: top;
   z-index: 1;
+
 }
 
 .footer {
