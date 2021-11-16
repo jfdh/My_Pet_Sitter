@@ -1,23 +1,21 @@
 <%# <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p> %>
 <body>
-
   <div class="banner">
-    <div class="container">
-      <h1>Find a loving local pet sitter or dog sitter</h1>
-      <p>Who treats your pet like family</p>
-    </div>
-
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
+        <div class="main-text">
+          <h1>Find a loving local pet sitter or dog sitter</h1>
+          <p>Who treats your pet like family</p>
+        </div>
         <div class="carousel-item active">
-          <img src="app/assets/images/Banner - Photo 1.jpeg" alt="#">
+          <img src= "<%= image_path("banner1.jpeg") %>">
         </div>
         <div class="carousel-item">
-          <img src="app/assets/images/Banner - Photo 2.jpeg" alt="#">
+          <img src= "<%= image_path("banner2.jpeg") %>">
         </div>
         <div class="carousel-item">
-          <img src="app/assets/images/Banner - Photo 3.jpeg" alt="#">
+          <img src= "<%= image_path("banner3.jpeg") %>">
         </div>
       </div>
     </div>

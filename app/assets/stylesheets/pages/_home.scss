@@ -1,8 +1,19 @@
 // Specific CSS for your home-page
-.banner {
+.main-text {
+  position: absolute;
+  top: 550px;
+  left: 50px;
+  text-align: left;
+  z-index: 2;
+}
+
+.banner img {
+  position: relative;
+  max-width: 100%;
   background-size: cover;
   background-position: center;
-  padding: 350px 0;
+  padding: 150px 0;
+  z-index: 1;
 }
 
 .banner h1 {
@@ -21,13 +32,14 @@
 }
 
 .footer {
-  background: black;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 200px;
-  padding: 0px 50px;
-  color: rgba(0, 0, 0, 0.3);
+  background-color: black;
+  color: white;
+  padding: 50px;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
 }
 
 .footer-links {
@@ -45,7 +57,7 @@
 
 .footer-links a:hover {
   opacity: 1;
-  color: orange;
+  color: orangered;
 }
 
 .footer .fa-heart {
@@ -63,6 +75,6 @@
 
 .footer-copyright a:hover {
   opacity: 1;
-  color: orange;
+  color: orangered;
   text-decoration: none;
 }
