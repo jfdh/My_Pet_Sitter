@@ -1,4 +1,5 @@
 // Specific CSS for your home-page
+
 @import url("components/avatar.css");
 @import url("components/container.css");
 @import url("components/button.css");
@@ -61,5 +62,52 @@ background-color: black;
   height: 100%;
   color: white;
   font-size: 16 px;
+
+
+.footer {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 200px;
+  padding: 0px 50px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: white;
+  opacity: 0.50;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: orange;
+}
+
+.footer .fa-heart {
+  color: red;
+}
+
+.footer-copyright {
+  color: white;
+}
+
+.footer-copyright a {
+  color: white;
+  opacity: 0.50;
+}
+
+.footer-copyright a:hover {
+  opacity: 1;
+  color: orange;
+  text-decoration: none;
 
 }
