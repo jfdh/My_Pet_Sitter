@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   def new
     @booking = Booking.new
   end
@@ -23,9 +22,9 @@ class BookingsController < ApplicationController
     redirect_to bookings_path
   end
 
-    private
+  private
 
-    def
-    end
-
+  def booking_params
+    params.require(:booking).permit(:name, :address, :description, :price, :picture)
+  end
 end
