@@ -10,6 +10,12 @@
   text-decoration: none;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .header{
 width: 100%;
 height: 60px;
@@ -39,6 +45,8 @@ align-items: center;
   align-items: center;
   justify-content: space-between;
   margin: 0px;
+  text-decoration: none;
+
 li{
   font-size: 16px;
   padding: 0px 20px;
@@ -52,12 +60,12 @@ li{
 
 .main-text {
   position: absolute;
-  top: 550px;
+  top: 40vh;
   left: 50px;
   text-align: left;
+  color: white;
   z-index: 2;
 }
-
 
 .navigation a li {
   display: table-cell;
@@ -71,15 +79,30 @@ li{
   overflow: hidden;
   display: block;
   width: 100%;
-  height: 70vh;
+  // height: 75vh;
+  position: relative;
 }
 
 .banner img {
-  position: relative;
+  // position: relative;
   max-width: 100%;
   background-size:cover;
   background-position: top;
-  z-index: 1;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .footer {
@@ -89,8 +112,8 @@ li{
   color: white;
   padding: 50px;
   width: 100%;
-  bottom: 0;
-  position: fixed;
+  // bottom: 0;
+  // position: fixed;
 }
 
 .footer-links {
@@ -128,21 +151,6 @@ li{
   opacity: 1;
   color: orange;
   text-decoration: none;
-}
-
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .footer-links {
