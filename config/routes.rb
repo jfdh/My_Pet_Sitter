@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :reviews, only: [ :new, :create ]
   end
 
-  get 'my_bookings', to:'pages#my_bookings'
+  get 'my_bookings', to: 'pages#my_bookings'
+  get 'about', to: 'pages#about'
 end
