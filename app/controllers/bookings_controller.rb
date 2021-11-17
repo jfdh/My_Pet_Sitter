@@ -1,4 +1,15 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = Booking.all
+
+    @markers = @bookings.geocoded.map do |booking|
+      {
+        lat: booking.latitude,
+        lng: booking.longitude
+      }
+    end
+  end
+
   def new
     @booking = Booking.new
   end
