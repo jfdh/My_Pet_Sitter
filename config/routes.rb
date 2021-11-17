@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
 
   get 'my_bookings', to:'pages#my_bookings'
+  get 'contact', to:'pages#contact'
 end
