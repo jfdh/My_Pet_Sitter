@@ -10,10 +10,17 @@
   text-decoration: none;
 }
 
+.logo {
+  a:hover {
+text-decoration: none;
+  }
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
 }
 
 .header{
@@ -46,6 +53,9 @@ align-items: center;
   justify-content: space-between;
   margin: 0px;
   text-decoration: none;
+a {
+  color: white;
+}
 
 li{
   font-size: 16px;
@@ -84,7 +94,7 @@ li{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 15px;
   form{
     width: 50%;
   }
@@ -103,7 +113,7 @@ li{
 .search-form-control .btn {
   position: absolute;
   top: 8px;
-  bottom: 8px;
+  bottom: 15px;
   right: 8px;
   margin: 0;
 }
@@ -164,6 +174,7 @@ li{
   color: white;
   padding: 50px;
   width: 100%;
+  // flex-grow: 1;
   // bottom: 0;
   // position: fixed;
 }
@@ -240,4 +251,26 @@ li{
   opacity: 1;
   color: orangered;
   text-decoration: none;
+}
+
+.btn2 {
+  text-decoration: none;
+  background: transparent url('bg_button_a.gif') no-repeat scroll top right;
+  background-color:burlywood;
+  color:white;
+  display: block;
+  float: left;
+  font: 15px;
+  height: 35px;
+  margin: 6px;
+  padding-top: 18px;
+  padding-bottom: 38px;
+  padding-right: 18px;
+  padding-left: 18px;
+  border-radius: 30px;
+  &:hover {
+    text-decoration: none;
+    color:blanchedalmond;
+    font-weight: bold;
+  }
 }
