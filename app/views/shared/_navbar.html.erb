@@ -1,6 +1,8 @@
 <div class="header">
   <div class="logo">
+  <%= link_to root_path do %>
     <h1>MY <span>PET SITTER</span> <i class="fas fa-paw"> </i></h1>
+    <% end %>
   </div>
 
   <div>
@@ -18,7 +20,7 @@
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="#">Profil</a>
         <a class="dropdown-item" href="#">Messages</a>
-        <a class="dropdown-item" href="#">Log Out</a>
+        <a> <%= button_to "logout", destroy_user_session_path, method: :delete  %></a>
       </div>
   </div>
 </div>
