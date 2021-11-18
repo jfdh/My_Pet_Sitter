@@ -6,12 +6,11 @@ Rails.application.routes.draw do
     resources :bookings, only: [ :new, :create ]
   end
 
-  resources :bookings do
+  resources :bookings, only: :destroy do
   resources :reviews, only: [ :new, :create ]
   end
 
   get 'my_bookings', to: 'pages#my_bookings'
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
-  post 'logout' => :destroy
 end
