@@ -1,6 +1,7 @@
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import { map } from 'jquery';
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
@@ -9,39 +10,44 @@ const fitMapToMarkers = (map, markers) => {
 };
 
 const initMapbox = () => {
-  const mapElement = document.getElementById('map');
+  // const mapelement = document.getElementById('map');
+  const maps = document.querySelectorAll('.user-map');
+  const apiKey = document.getElementById('cards').dataset.mapboxApiKey
 
-  if (mapElement) { // only build a map if there's a div#map to inject into
-    mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
-    const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/eelhagnow/ckw4twv1714x314lc14m8p8pj'
-    });
-    const markers = JSON.parse(mapElement.dataset.markers);
-    markers.forEach((marker) => {
-      const popup = new mapboxgl.Popup().setHTML(marker.info_window);
+  maps.forEach(currentMap => {
+    if (currentMap) { // only build a map if there's a div#map to inject into
+      mapboxgl.accessToken = apiKey;
+      const map = new mapboxgl.Map({
+        container: currentMap.attributes.id.value,
+        style: 'mapbox://styles/eelhagnow/ckw4twv1714x314lc14m8p8pj'
+      });
+      // const markers = JSON.parse(curentMap.dataset.markers);
+      // markers.forEach((marker) => {
+      console.log(currentMap)
+      const position = JSON.parse(currentMap.dataset.position)
+      const content = currentMap.dataset.popup
+      const image = currentMap.dataset.image
+
+      const popup = new mapboxgl.Popup().setHTML(content);
 
       const element = document.createElement('div');
       element.className = 'marker';
-      element.style.backgroundImage = `url('${marker.image_url}')`;
+      element.style.backgroundImage = `url('${image}')`;
       element.style.backgroundSize = 'contain';
       element.style.width = '40px';
       element.style.height = '40px';
 
       new mapboxgl.Marker(element)
-        .setLngLat([marker.lng, marker.lat])
+        .setLngLat(position)
         .setPopup(popup)
         .addTo(map);
-    });
-    // if (markers.count > 1) {
-      fitMapToMarkers(map, markers);
-    // } else {
-      // map.setCenter([markers[0].lng, markers[0].lat])
-      // map.setZoom(3)
-    //
-    map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
-                                        mapboxgl: mapboxgl }));
-  }
+
+        map.setCenter(position)
+      map.setZoom(12)
+      map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
+                                          mapboxgl: mapboxgl }));
+    }
+  })
 };
 
 export { initMapbox };

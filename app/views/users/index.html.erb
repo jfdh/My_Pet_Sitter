@@ -1,32 +1,33 @@
 <div class="team-boxed">
-<div class="container">
-  <div class="intro">
-    <h2 class="text-center">Petsitters</h2>
-    <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat,
-      pellentesque ut laoreet vitae.</p>
-  </div>
-
-  <div class=" people" id="cards">
-    <div class="col-md-6 col-lg-4 item">
-      <div class="box">
-        <ul>
-          <% @users.each do |user| %>
-            <% if user.pet_sitter %>
-            <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
-            <li><h2><%= user.name %></h2>
-                <p><%= user.location %></p></li>
-
+  <div class="container">
+    <div class="intro">
+      <h2 class="text-center">Petsitters</h2>
+      <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat,
+        pellentesque ut laoreet vitae.</p>
+    </div>
+    <div class="people" id="cards" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      <div class="col-12 item">
+            <% @users.each_with_index do |user, index| %>
+              <% if user.pet_sitter %>
+              <div class="box">
+              <div class= "profil">
+                <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
+                  <h2><%= user.name %></h2>
+                  <p><%= user.location %></p>
+              </div>
+                  <div class="user-map" id="map-<%= index %>"
+                      style="width: 100%; height: 250px"
+                      data-position="[<%= user.longitude %>, <%= user.latitude %>]"
+                      data-popup="<%= render partial: 'info_window', locals: { user: user } %>"
+                      data-image="<%= asset_url('petsittericon.jpg') %>"
+                    >
+                  </div>
+                </div>
+              <% end %>
             <% end %>
-          <% end %>
-        </ul>
-          <%#<div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div> %>
-        </div>
-      </div>
-      <div id="map"
-          style="width: 100%; height: 600px;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+
+            <%#<div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div> %>
+          <%# </div> %>
       </div>
     </div>
   </div>
