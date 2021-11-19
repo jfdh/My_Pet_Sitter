@@ -8,11 +8,15 @@
 
   <div class=" people" id="cards">
     <div class="col-md-6 col-lg-4 item">
-      <div class="box"><img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
+      <div class="box">
         <ul>
           <% @users.each do |user| %>
+            <% if user.pet_sitter %>
+            <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
             <li><h2><%= user.name %></h2>
                 <p><%= user.location %></p></li>
+
+            <% end %>
           <% end %>
         </ul>
           <%#<div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div> %>
