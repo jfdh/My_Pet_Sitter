@@ -5,7 +5,8 @@
     <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat,
       pellentesque ut laoreet vitae.</p>
   </div>
-  <div class="row people">
+
+  <div class=" people" id="cards">
     <div class="col-md-6 col-lg-4 item">
       <div class="box"><img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
         <ul>
@@ -18,10 +19,10 @@
         </div>
       </div>
       <div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-     </div>
+          style="width: 100%; height: 600px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
       </div>
     </div>
   </div>
