@@ -95,7 +95,7 @@ li{
   justify-content: center;
   align-items: center;
   padding: 15px;
-  form{
+  input {
     width: 50%;
   }
 }
@@ -105,19 +105,22 @@ li{
 }
 
 .search-form-control .btn {
+  color: lightgray;
   position: absolute;
   top: 8px;
   bottom: 15px;
-  right: 8px;
+  right: 350px;
 }
 
 .search-form-control .form-control {
+  background-color: black;
   height: 4rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   border: 1px solid #E7E7E7;
 }
 
 .search-form-control .form-control:focus {
+  background-color: black;
   border: 1px solid #1EDD88;
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);

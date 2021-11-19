@@ -2,10 +2,10 @@
   <div class="search-bar search-form-control form-group">
     <%= text_field_tag :query,
       params[:query],
-      class: "form-control string required",
+      class: "search-bar form-control string required",
       placeholder: "Where is your location ?"
     %>
-    <%= button_tag "Search", type: "submit", class: "btn btn-flat" do %>
+    <%= button_tag "Search", type: "submit", class: "btn" do %>
       <i class="fas fa-search"></i> Search
     <% end %>
   </div>
