@@ -16,6 +16,10 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "location" }%>
+    <%= f.input :pet_sitter,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Do you wanna become a pet sitter?" }%>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
