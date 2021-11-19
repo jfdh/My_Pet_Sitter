@@ -19,8 +19,8 @@ html {
 
 .team-boxed h2 {
   font-weight: bold;
-  margin-bottom: 40px;
-  padding-top: 40px;
+  margin-bottom: 8px;
+  padding-top: 8px;
   color: inherit;
 }
 
@@ -55,6 +55,7 @@ html {
   padding: 30px;
   background-color: #fff;
   margin-bottom: 30px;
+  display: flex;
 }
 
 .team-boxed .item .name {
@@ -96,4 +97,8 @@ html {
 
 .team-boxed .social a:hover {
   opacity: 1;
+}
+
+.profil {
+  margin-right: 30px;
 }
