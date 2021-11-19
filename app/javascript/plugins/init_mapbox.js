@@ -44,8 +44,8 @@ const initMapbox = () => {
 
         map.setCenter(position)
       map.setZoom(12)
-      map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
-                                          mapboxgl: mapboxgl }));
+      // map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
+      //                                     mapboxgl: mapboxgl }));
     }
   })
 };

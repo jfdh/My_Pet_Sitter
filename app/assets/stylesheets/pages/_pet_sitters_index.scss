@@ -56,6 +56,7 @@ html {
   background-color: #fff;
   margin-bottom: 30px;
   display: flex;
+  width: 80vw;
 }
 
 .team-boxed .item .name {
@@ -101,4 +102,8 @@ html {
 
 .profil {
   margin-right: 30px;
+}
+
+.card-user-link {
+  text-decoration: none;
 }
